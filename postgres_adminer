@@ -1,0 +1,14 @@
+---
+services:
+  mypostgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: jobair
+
+  adminer:
+    image: adminer
+    ports:
+      - 9090:8080
+    links:
+      - mypostgres:postgres
+...
