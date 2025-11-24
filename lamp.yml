@@ -1,0 +1,21 @@
+---
+services:
+  databases:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: jobair
+
+
+  apache:
+    image: httpd
+    ports:
+      - 5050:8080
+    links:
+      - databases:mysql
+
+  PHP:
+    image: php:8.2-cli
+    links:
+      - databases:mysql
+      - apache:httpd
+...
