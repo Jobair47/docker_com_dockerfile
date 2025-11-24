@@ -1,0 +1,15 @@
+---
+version: "29.0.0"
+services:
+  mysql_databases:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: Jobair
+
+  wordpress:
+    image: wordpress
+    ports:
+      - 8080:80
+    links:
+      - mysql_databases:mysql
+...
