@@ -1,0 +1,3 @@
+FROM nginx
+LABEL maintainer="jobair"
+EXPOSE 80

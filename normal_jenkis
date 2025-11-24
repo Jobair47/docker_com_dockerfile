@@ -1,0 +1,6 @@
+FROM jenkins/jenkins
+LABEL maintainer="jobair"
+USER root
+RUN apt-get update
+EXPOSE 8080
+USER jenkins

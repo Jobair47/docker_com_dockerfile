@@ -1,0 +1,13 @@
+---
+services:
+  yoyo:
+    build:
+      context: .
+      dockerfile: normal_jenkis 
+    ports:
+      - "9090:8080"
+  mytom:
+    image: tomee
+    ports:
+      - 8080:8080
+...

@@ -1,0 +1,5 @@
+FROM ubuntu
+LABEL maintainer="jobair"
+WORKDIR /job
+COPY script.sh .
+RUN sh script.sh

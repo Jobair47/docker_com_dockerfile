@@ -1,0 +1,12 @@
+---
+services:
+  jobair:
+    image: jojo
+    ports:
+      - "8080:8080"
+  tomcat:
+    image: tomee
+    ports:
+      - "9090:8080"
+...
+

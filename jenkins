@@ -1,0 +1,8 @@
+FROM ubuntu 
+LABEL maintainer="jobair"
+WORKDIR /job/jenkins
+RUN apt-get update
+RUN apt-get install -y openjdk-17-jdk
+ADD https://get.jenkins.io/war-stable/2.528.2/jenkins.war .
+EXPOSE 8080
+ENTRYPOINT ["java" , "-jar" , "jenkins.war"]

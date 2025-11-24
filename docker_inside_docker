@@ -1,0 +1,6 @@
+FROM ubuntu
+LABEL maintainer="jobair"
+WORKDIR /job
+COPY install-docker.sh .
+RUN sh install-docker.sh
+

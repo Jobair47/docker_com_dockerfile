@@ -1,0 +1,7 @@
+FROM ubuntu
+LABEL maintainer="jobair"
+RUN apt-get update
+RUN apt-get -y install nginx
+EXPOSE 80
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
+

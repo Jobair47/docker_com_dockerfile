@@ -1,0 +1,24 @@
+---
+services:
+  myjenkins:
+    image: jenkins/jenkins
+    ports:
+      - 8080:8080
+    networks:
+      - abc
+  prodserver:
+    image: tomee
+    ports:
+      - 9090:8080
+    networks:
+      - xyz
+  qaserver:
+    image: tomee
+    ports:
+      - 8888:8080
+    networks:
+      - xyz
+networks:
+  abc: {}
+  xyz: {}
+...

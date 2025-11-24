@@ -1,0 +1,27 @@
+---
+services:
+  mydb:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: JOBAIR
+      POSTGRES_USER: JOB
+      POSTGRES_DB: MYDB
+    volumes:
+      - db:/var/lib/postgres/data
+
+  mywordpress:
+    image: wordpress
+    ports:
+      - 8089:80
+    volumes:
+      - wordpress:/var/www/html
+
+volumes:
+  db:
+  wordpress:
+
+networks:
+  default:
+    external:
+      name: jobair
+...
